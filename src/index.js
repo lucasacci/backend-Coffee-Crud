@@ -12,4 +12,4 @@ app.listen(app.get('port'), ()=>{
 })
 
 
-console.log('hola mundo')
+//middlewares: son funciones que se ejecutan antes de llegar a las rutas
