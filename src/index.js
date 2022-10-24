@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import path  from 'path';
+import productoRouter from './routes/productos.routes'
 // llamar a la coneccion de base de datos
 import './database'
 
@@ -36,8 +37,9 @@ console.log(path.join(__dirname,'../public/index.html'))
 
 // rutas: 
 
-app.get('/',(req, res)=>{
-    res.send('Hola desde el backend en la peticion gets')
-});
+// app.get('/',(req, res)=>{
+//     res.send('Hola desde el backend en la peticion gets')
+// });
 
-
+//http://localhost:4000/apicafe/prueba
+app.use('/apicafe',productoRouter);
