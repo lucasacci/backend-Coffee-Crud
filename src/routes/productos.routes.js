@@ -1,5 +1,11 @@
 import { Router } from "express";
-import { crearProductos, editarProductos, listarProductos, obtenerProductos } from "../controllers/productos.controllers";
+import {
+  borrarProductos,
+  crearProductos,
+  editarProductos,
+  listarProductos,
+  obtenerProductos,
+} from "../controllers/productos.controllers";
 
 //instanciar el router
 
@@ -9,9 +15,11 @@ const router = Router();
 //     res.send('Hola desde el backend en la peticion gets')
 // });
 
-
-router.route('/productos').get(listarProductos).post(crearProductos)
-router.route('/productos/:id').get(obtenerProductos).put(editarProductos)
-
+router.route("/productos").get(listarProductos).post(crearProductos);
+router
+  .route("/productos/:id")
+  .get(obtenerProductos)
+  .put(editarProductos)
+  .delete(borrarProductos);
 
 export default router;
