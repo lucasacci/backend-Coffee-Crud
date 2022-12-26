@@ -17,6 +17,8 @@ const router = Router();
 //     res.send('Hola desde el backend en la peticion gets')
 // });
 
+router.get('/productos', listarProductos)
+
 router
   .route("/productos")
   .get(listarProductos)
