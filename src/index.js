@@ -35,12 +35,11 @@ app.use(morgan('dev'))
 
 
 
- 
 // rutas: 
 
-app.get('/',(req, res)=>{
-    res.send('Hola desde el backend en la peticion gets')
-});
+// app.get('/',(req, res)=>{
+//     res.send('Hola desde el backend en la peticion gets')
+// });
 
 //http://localhost:4000/apicafe/prueba
 app.use('/apicafe',productoRouter);
