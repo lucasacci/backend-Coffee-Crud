@@ -31,7 +31,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'))
 
 //cargar un archivo estatico
- app.use(express.static(path.join(__dirname,'../public/index.html')))
+ app.use(express.static('public'))
 
 
 
