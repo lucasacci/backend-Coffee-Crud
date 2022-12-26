@@ -11,7 +11,7 @@ const app = express();
 
 //configurar un puerto
 
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 4001);
 
 app.listen(app.get('port'), ()=>{
     console.log('Estoy en el puerto ' + app.get('port'));
@@ -32,14 +32,15 @@ app.use(morgan('dev'))
 
 //cargar un archivo estatico
  app.use(express.static(path.join(__dirname,'../public/index.html')))
-console.log(path.join(__dirname,'../public/index.html'))
 
 
+
+ 
 // rutas: 
 
-// app.get('/',(req, res)=>{
-//     res.send('Hola desde el backend en la peticion gets')
-// });
+app.get('/',(req, res)=>{
+    res.send('Hola desde el backend en la peticion gets')
+});
 
 //http://localhost:4000/apicafe/prueba
 app.use('/apicafe',productoRouter);
