@@ -31,14 +31,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'))
 
 //cargar un archivo estatico
- app.use(express.static(path.join(__dirname,'../public/index.html')))
+ app.use(express.static(path.join(__dirname,'../public')))
 
 
 // rutas: 
 
-app.get('/',(req, res)=>{
-    res.send('Hola desde el backend en la peticion gets')
-});
+// app.get('/',(req, res)=>{
+//     res.send('ads')
+// });
 
 //http://localhost:4000/apicafe/prueba
 app.use('/apicafe',productoRouter);
